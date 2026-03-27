@@ -1,12 +1,10 @@
-import React from 'react';
+import React from "react";
 
-function AboutUs() {
-    return (
-        <div>
-            <h1>Paradise Nursery</h1>
-            <p>Our mission is to provide the best houseplants...</p>
-        </div>
-    );
+export default function AboutUs() {
+  return (
+    <div className="about-us-container">
+      <p>Paradise Nursery is dedicated to providing the best houseplants for your home and office.</p>
+      <p>Our mission is to help people bring nature indoors while offering high-quality plants and care instructions.</p>
+    </div>
+  );
 }
-
-export default AboutUs;
