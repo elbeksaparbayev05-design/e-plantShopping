@@ -1,24 +1,32 @@
+// ProductList.jsx
 import React from "react";
 import { useDispatch } from "react-redux";
 import { addItem } from "./CartSlice";
 
 const plants = [
-  { id: 1, name: "Ficus", price: 15 },
-  { id: 2, name: "Monstera", price: 20 },
-  // ... kamida 6 ta har kategoriya
+  { id: 1, name: "Ficus", category: "Indoor", price: 10 },
+  { id: 2, name: "Aloe Vera", category: "Indoor", price: 12 },
+  { id: 3, name: "Bamboo", category: "Outdoor", price: 15 },
+  { id: 4, name: "Cactus", category: "Indoor", price: 8 },
+  { id: 5, name: "Orchid", category: "Outdoor", price: 20 },
+  { id: 6, name: "Fern", category: "Indoor", price: 14 },
 ];
 
-export default function ProductList() {
+function ProductList() {
   const dispatch = useDispatch();
+
   return (
-    <div className="product-list">
-      {plants.map(plant => (
-        <div key={plant.id}>
+    <div>
+      {plants.map((plant) => (
+        <div key={plant.id} className="plant-card">
           <h3>{plant.name}</h3>
-          <p>${plant.price}</p>
-          <button onClick={() => dispatch(addItem({...plant, quantity: 1}))}>Add to Cart</button>
+          <p>Category: {plant.category}</p>
+          <p>Price: ${plant.price}</p>
+          <button onClick={() => dispatch(addItem(plant))}>Add to Cart</button>
         </div>
       ))}
     </div>
   );
 }
+
+export default ProductList;

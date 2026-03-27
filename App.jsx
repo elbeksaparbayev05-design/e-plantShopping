@@ -1,12 +1,11 @@
-// Add your landing page JSX here
+// App.jsx
 import React from "react";
-import "./App.css";
 
 function App() {
   return (
-    <div className="background-image">
+    <div className="landing-page">
       <h1>Welcome to Paradise Nursery</h1>
-      <button>Get Started</button>
+      <button onClick={() => alert("Get Started clicked!")}>Get Started</button>
     </div>
   );
 }
