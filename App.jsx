@@ -1,13 +1,11 @@
-// App.jsx
-import React from "react";
+import React from 'react';
+import './App.css';
 
-function App() {
-  return (
-    <div className="landing-page">
-      <h1>Welcome to Paradise Nursery</h1>
-      <button onClick={() => alert("Get Started clicked!")}>Get Started</button>
-    </div>
-  );
-}
+const App = () => (
+  <div className="background-image">
+    <h1>Welcome to Paradise Nursery</h1>
+    <button>Get Started</button>
+  </div>
+);
 
 export default App;
